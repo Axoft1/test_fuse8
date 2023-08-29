@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0px 10px 2px #41418028;
+  padding: 40px;
+  flex-basis: 32%;
+  box-sizing: border-box;
+  @media (max-width: 1200px) {
+    flex-basis: 48%;
+  }
+  @media (max-width: 800px) {
+    flex-basis: 100%;
+  }
+  @media (max-width: 533px) {
+    padding: 20px;
+  }
+  .description {
+    padding-bottom: 30px;
+    color: #282626;
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .date {
+    display: flex;
+    justify-content: space-between;
+    color: #767676;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.card:nth-child(1) {
+  flex-basis: 48%;
+  @media (max-width: 800px) {
+    flex-basis: 100%;
+  }
+}
+.card:nth-child(2) {
+  flex-basis: 48%;
+  @media (max-width: 800px) {
+    flex-basis: 100%;
+  }
+}
