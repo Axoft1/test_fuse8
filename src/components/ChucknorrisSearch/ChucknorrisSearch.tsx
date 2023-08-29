@@ -4,7 +4,7 @@ import styles from "./ChucknorrisSearch.module.scss";
 import Card from "../Card/Card";
 
 const ChucknorrisSearch = () => {
-  const [search, setSearch] = useState<string>("");
+  const [search, setSearch] = useState<string>("asd");
   const [isError, setIsError] = useState<any>();
   const { data, isLoading, error } = useGetChucknorrisSearchQuery(search);
 
@@ -24,14 +24,7 @@ const ChucknorrisSearch = () => {
     );
     return () => clearTimeout(label);
   }, [search.length]);
-
-  if (error) {
-    if ("status" in error) {
-      if (error.status === 404) {
-        return <></>;
-      }
-    }
-  }
+  
   return (
     <section className={styles.search}>
       <div className={styles.input}>
@@ -54,7 +47,18 @@ const ChucknorrisSearch = () => {
       ) : (
         ""
       )}
-      <div className={styles.cards}>
+      <div
+        className={styles.cards}
+        style={{
+          justifyContent: `${
+            data
+              ? data?.result.length === 1
+                ? "center"
+                : "space-between"
+              : "space-between"
+          }`,
+        }}
+      >
         {isLoading ? (
           <div>Loading</div>
         ) : data ? (

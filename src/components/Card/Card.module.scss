@@ -37,14 +37,16 @@
   }
 }
 .card:nth-child(1) {
-  flex-basis: 48%;
-  @media (max-width: 800px) {
-    flex-basis: 100%;
+  width: 100%;
+  @media (min-width: 800px) {
+    flex-basis: 48%;
   }
 }
 .card:nth-child(2) {
-  flex-basis: 48%;
-  @media (max-width: 800px) {
-    flex-basis: 100%;
+  @media (min-width: 800px) {
+    flex-basis: 48%;
   }
+}
+.card:last-child {
+  flex-grow: 1;
 }
