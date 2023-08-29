@@ -4,7 +4,7 @@ import styles from "./ChucknorrisSearch.module.scss";
 import Card from "../Card/Card";
 
 const ChucknorrisSearch = () => {
-  const [search, setSearch] = useState<string>("asd");
+  const [search, setSearch] = useState<string>("");
   const [isError, setIsError] = useState<any>();
   const { data, isLoading, error } = useGetChucknorrisSearchQuery(search);
 
