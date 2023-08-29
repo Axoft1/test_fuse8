@@ -6,6 +6,7 @@
   padding: 40px;
   flex-basis: 32%;
   box-sizing: border-box;
+  transition: all .5s;
   @media (max-width: 1200px) {
     flex-basis: 48%;
   }
@@ -35,6 +36,9 @@
     font-weight: 400;
     line-height: normal;
   }
+}
+.card:hover{    
+  box-shadow: 0 0px 10px 2px #4141806c;
 }
 .card:nth-child(1) {
   width: 100%;
