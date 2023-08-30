@@ -6,7 +6,9 @@ import Card from "../Card/Card";
 const ChucknorrisSearch = () => {
   const [search, setSearch] = useState<string>("");
   const [isError, setIsError] = useState<any>();
-  const { data, isLoading, error } = useGetChucknorrisSearchQuery(search);
+  const { data, isLoading, error } = useGetChucknorrisSearchQuery(search, {
+    skip: search.length<3,
+  });
 
   useEffect(() => {
     if (search.length === 0 || search.length >= 3) {
